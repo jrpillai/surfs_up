@@ -20,3 +20,18 @@ June and December temperatures were extract using a filter, and loaded into a da
   * Although December has slightly more variability, there is still predictably temperate weather the majority of the time.
 
 ## Summary
+Based on temperature data alone, it appears that the weather in Oahu is conducive to running a Surf and Ice Cream Shop in Oahu. However, I performed a few additional queries to determine if there is a difference in rainfall between these months.
+
+```
+# Write a query that filters the Measurement table to retrieve the precipitation for the month of December and June.
+prcp_dec = session.query(Measurement.prcp).filter(extract('month', Measurement.date)=='12').all()
+prcp_june = session.query(Measurement.prcp).filter(extract('month', Measurement.date)=='06').all()
+```
+
+The code above extracted the daily rainfall over the last month for 2010-2017. The resulting analysis showed a mean daily rainfall of 
+
+
+
+
+
+
